@@ -16,7 +16,15 @@ const ChiTietVe = () => {
       title: "Giá",
       dataIndex: "gia",
       key: "gia",
-    },
+      render: (text) => (
+        <p>
+          {text.toLocaleString("vi-VN", {
+            style: "currency",
+            currency: "VND",
+          })}
+        </p>
+      ),
+    },  
     {
       title: "Hủy vé",
       dataIndex: "daDat",
@@ -63,7 +71,9 @@ const ChiTietVe = () => {
           </h4>
         </div>
         <div>
-            <button className="w-100 btn btn-primary py-3 mt-4">Thanh Toán</button>
+          <button className="w-100 btn btn-primary py-3 mt-4">
+            Thanh Toán
+          </button>
         </div>
       </div>
     </div>

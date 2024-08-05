@@ -10,7 +10,13 @@ h3 {
 
 .bookingMovie {
   font-family: "fontGame";
-  background: url("./assets/image/bgmovie.jpg") center/cover;
+  background: url("./assets/image/bgmovie.jpg");
+  background-size: 1700px 1350px;
+  /* Kích thước cố định */
+  background-repeat: no-repeat;
+  /* Không lặp hình ảnh */
+  background-position: center;
+  /* Căn giữa hình ảnh */
 }
 
 .ghe {
@@ -37,30 +43,35 @@ h3 {
   color: yellow;
   padding: 7px;
 }
+
 .borderNumber {
   width: 45px;
   height: 45px;
   cursor: pointer;
-  background: #654ea3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #eaafc8,
-    #654ea3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #eaafc8,
-    #654ea3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #654ea3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #eaafc8,
+      #654ea3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #eaafc8,
+      #654ea3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
 }
+
 .borderNumber.activeChoosed {
   cursor: pointer;
-  background: #4ECDC4;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: #4ECDC4;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #556270, #4ECDC4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
 }
+
 .firstChar {
   text-align: center;
   line-height: 60px;
@@ -85,8 +96,10 @@ h3 {
 .borderChoosed {
   border: 3px;
 
-  background: #f46b45; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+  background: #f46b45;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f46b45, #eea849);
+  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f46b45, #eea849);
 
   cursor: no-drop !important;
@@ -95,10 +108,11 @@ h3 {
   height: 45px;
   line-height: 43px;
 }
-.chiTietVe{
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+
+.chiTietVe {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background-color: white;
-  box-shadow: -29px 0px 21px 2px rgba(0,0,0,0.67);
-  -webkit-box-shadow: -29px 0px 21px 2px rgba(0,0,0,0.67);
-  -moz-box-shadow: -29px 0px 21px 2px rgba(0,0,0,0.67);
+  box-shadow: -29px 0px 21px 2px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: -29px 0px 21px 2px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: -29px 0px 21px 2px rgba(0, 0, 0, 0.67);
 }
