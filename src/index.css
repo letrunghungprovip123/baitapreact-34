@@ -11,7 +11,7 @@ h3 {
 .bookingMovie {
   font-family: "fontGame";
   background: url("./assets/image/bgmovie.jpg");
-  background-size: 1700px 1350px;
+  background-size: cover;
   /* Kích thước cố định */
   background-repeat: no-repeat;
   /* Không lặp hình ảnh */

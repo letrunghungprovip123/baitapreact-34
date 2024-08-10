@@ -30,7 +30,6 @@ const ChiTietVe = () => {
       dataIndex: "daDat",
       key: "daDat",
       render: (text, record, index) => {
-        console.log(record);
         return (
           <>
             <span onClick={() => dispatch(xoaGheDuocChon(record))}>Delete</span>
@@ -51,7 +50,7 @@ const ChiTietVe = () => {
       <div className="text-center">
         <h2 className="mt-5 mb-3">CHI TIẾT VÉ</h2>
         <img
-          src="./src/assets/image/81FQBhYvaxL._AC_UF1000,1000_QL80_.jpg"
+          src="https://m.media-amazon.com/images/I/81FQBhYvaxL._AC_UF1000,1000_QL80_.jpg"
           alt=""
           width={170}
           className="mb-3"
