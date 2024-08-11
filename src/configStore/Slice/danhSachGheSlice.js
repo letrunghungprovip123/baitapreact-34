@@ -29,9 +29,13 @@ const danhSachGheSlice = createSlice({
       );
       if (index2 != -1) state.soGheDuocChon.splice(index2, 1);
     },
+    xoaTatCaGhe : (state,action) => {
+      state.gheDuocChon = []
+      state.soGheDuocChon = []
+    } 
   },
 });
 
-export const { themGheDuocChon, xoaGheDuocChon } = danhSachGheSlice.actions;
+export const { themGheDuocChon, xoaGheDuocChon,xoaTatCaGhe } = danhSachGheSlice.actions;
 
 export default danhSachGheSlice.reducer;

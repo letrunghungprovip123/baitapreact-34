@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Space, Table, Tag } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { xoaGheDuocChon } from "../configStore/Slice/danhSachGheSlice";
+import { Button, Modal } from "antd";
+import {
+  xoaGheDuocChon,
+  xoaTatCaGhe,
+} from "../configStore/Slice/danhSachGheSlice";
 const ChiTietVe = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  let tongTien2 = 0;
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const { gheDuocChon } = useSelector((state) => state.danhSachGheSlice);
   const dispatch = useDispatch();
   const columns = [
@@ -24,7 +36,7 @@ const ChiTietVe = () => {
           })}
         </p>
       ),
-    },  
+    },
     {
       title: "Hủy vé",
       dataIndex: "daDat",
@@ -43,8 +55,12 @@ const ChiTietVe = () => {
     data.push(item);
   });
   let tongTien = data.reduce((tong, item, index) => {
+    if(tong != 0){
+      tongTien2 = tong
+    }
     return (tong += item.gia);
   }, 0);
+  console.log(tongTien2)
   return (
     <div className="col-lg-4 chiTietVe">
       <div className="text-center">
@@ -70,9 +86,20 @@ const ChiTietVe = () => {
           </h4>
         </div>
         <div>
-          <button className="w-100 btn btn-primary py-3 mt-4">
-            Thanh Toán
-          </button>
+          <Button
+            type="primary"
+            onClick={() => {
+              setIsModalOpen(true);
+              dispatch(xoaTatCaGhe());
+            }}
+            className="py-4 w-100 mt-4"
+          >
+            Thanh Toan
+          </Button>
+          <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <p className="fs-3 fw-bold text-success">Đặt vé thành công!</p>
+            <a href="#">Chuyển đến trang thanh toán</a>
+          </Modal>
         </div>
       </div>
     </div>
